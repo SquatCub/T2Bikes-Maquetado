@@ -62,7 +62,6 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background: rgb(50, 85, 56);
 }
 
 /*--------------------LOGIN---------------------*/
@@ -72,6 +71,9 @@ body {
 
 .fondo{
   background-color: white;
+}
+.fondo2{
+  background: rgb(50, 85, 56);
 }
 
 .rotate {
@@ -88,7 +90,21 @@ body {
 }
 
 /*--------------------LOGIN---------------------*/
-
+/*--------------------Menu principal---------------------*/
+.con-text{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+/*--------------------Menu principal---------------------*/
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
