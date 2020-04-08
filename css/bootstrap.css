@@ -66,15 +66,20 @@ body {
 
 /*--------------------LOGIN---------------------*/
 .login {
-  margin-top: 100px;
+  margin-top: 5%;
+}
+
+.miShadow
+{
+  box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.9);
 }
 
 .fondo{
   background-color: white;
 }
 .fondo2{
-  background: rgb(50, 85, 56);
-}
+   background: rgb(50, 85, 56);
+ }
 
 .rotate {
   animation: rotation 5s infinite linear;
