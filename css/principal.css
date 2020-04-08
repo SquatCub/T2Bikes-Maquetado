@@ -255,4 +255,9 @@ a.article:hover {
     #sidebarCollapse span {
         display: none;
     }
+
+    #sidebar .components a
+    {
+        display: none;
+    }
 }
