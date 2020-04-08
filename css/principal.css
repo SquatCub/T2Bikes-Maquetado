@@ -78,6 +78,10 @@ span {
 #sidebar.active .CTAs {
     display: none;
 }
+#sidebar.active .sidebar-header img,
+#sidebar.active .CTAs {
+    display: none;
+}
 
 #sidebar.active .sidebar-header strong {
     display: block;
@@ -219,6 +223,10 @@ a.article:hover {
         margin-left: 0 !important;
     }
     #sidebar .sidebar-header h3,
+    #sidebar .CTAs {
+        display: none;
+    }
+    #sidebar .sidebar-header img,
     #sidebar .CTAs {
         display: none;
     }
