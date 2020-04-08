@@ -80,11 +80,11 @@ span {
 }
 #sidebar.active .sidebar-header img,
 #sidebar.active .CTAs {
-    display: none;
+    width: 50px;
 }
 
 #sidebar.active .sidebar-header strong {
-    display: block;
+    display: none;
 }
 
 #sidebar ul li a {
@@ -98,9 +98,9 @@ span {
 }
 
 #sidebar.active ul li a i {
-    margin-right: 0;
+    text-align: center;
     display: block;
-    font-size: 1.8em;
+    font-size: 0.9em;
     margin-bottom: 5px;
 }
 
@@ -235,19 +235,22 @@ a.article:hover {
     }
     #sidebar ul li a {
         padding: 20px 10px;
+        text-align: center;
     }
     #sidebar ul li a span {
         font-size: 0.85em;
     }
     #sidebar ul li a i {
-        margin-right: 0;
         display: block;
+        text-align: center !important;
     }
     #sidebar ul ul a {
         padding: 10px !important;
+        text-align: center;
     }
     #sidebar ul li a i {
-        font-size: 1.3em;
+        font-size: 0.4em;
+        text-align: center;
     }
     #sidebar {
         margin-left: 0;
@@ -258,6 +261,6 @@ a.article:hover {
 
     #sidebar .components a
     {
-        display: none;
+        display: block;
     }
 }
