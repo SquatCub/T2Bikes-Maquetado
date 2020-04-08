@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="es" dir="ltr">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>T2 Bikes</title>
-
+    <title>Chart</title>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Our Custom CSS -->
@@ -19,10 +15,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-</head>
-
-<body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" charset="utf-8"></script>
+  </head>
+  <body>
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar" class="active">
@@ -31,8 +26,8 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active mt-2">
-                    <a href="#">
+                <li class="mt-2">
+                    <a href="principal.html">
                         <i class="fas fa-home"></i>
                         <span class="CTAs">Home</span>
                     </a>
@@ -70,13 +65,13 @@
                     </ul>
                 </li>
 
-                <li class="mt-1">
+                <li class="mt-1 active">
                      <a href="#pageEstadisticas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="demo-icon icon-chart-bar"></i>
                         <span class="CTAs">Estadisticas</span>
                     </a>
                     <ul class="collapse list-unstyled" id="pageEstadisticas">
-                        <li>
+                        <li class="active">
                             <a href="chart.html">Page 1</a>
                         </li>
                         <li>
@@ -127,28 +122,54 @@
                 </div>
             </nav>
 
-            <div class="container text-center">
-              <h2>Bienvenido Usuario</h2>
-              <h4>Estas logeado como: Administrador</h4>
-              <p>Recuerda cerrar sesión siempre</p>
+            <div class="container text-center" style="width:50vw;">
+              <canvas id="myChart"></canvas>
             </div>
+          </div>
         </div>
-    </div>
 
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
             });
-        });
-    </script>
-</body>
+        </script>
 
+  </body>
+  <script>
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "pie",
+      data: {
+        labels: ['col1', 'col2', 'col3'],
+        datasets: [{
+          label: 'Num. de datos',
+          data: [10, 8, 15],
+          backgroundColor: [
+            'rgb(66, 134, 244)',
+            'rgb(100, 8, 75)',
+            'rgb(200, 134, 244)'
+          ]
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+          }]
+        }
+      }
+    });
+  </script>
 </html>
