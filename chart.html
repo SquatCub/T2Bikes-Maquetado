@@ -20,7 +20,7 @@
   <body>
     <div class="wrapper">
         <!-- Sidebar  -->
-        <nav id="sidebar" class="active">
+        <nav id="sidebar" class="">
             <div class="sidebar-header text-center">
               <img src="img/logo.png" width="100" alt="logo_principal">
             </div>
@@ -84,11 +84,23 @@
                 </li>
             </ul>
 
-            <ul class="list-unstyled CTAs">
+            <div class="d-lg-block d-md-block d-sm-none">
+              <ul class="list-unstyled CTAs ">
+                  <li>
+                      <a href="index.html" class="btn btn-danger pl-5">
+                         <i class="fas fa-sign-out-alt" style=" transform: rotate(180deg); font-size: 18px;"></i>
+                         Cerrar sesión
+                      </a>
+                  </li>
+              </ul>
+            </div>
+
+
+            <ul class="d-lg-none d-md-none d-sm-block">
                 <li>
-                    <a href="index.html" class="btn btn-danger pl-5">
-                       <i class="fas fa-sign-out-alt" style=" transform: rotate(180deg); font-size: 18px;"></i>
-                       Cerrar sesión
+                    <a href="index.html" class="btn-sm btn-danger pl-1">
+                       <i class="fas fa-sign-out-alt" style=" transform: rotate(180deg); font-size: 25px;"></i>
+                        <p style="font-size: 0.5em; margin-bottom:0; color: white;">Cerrar sesión</p>
                     </a>
                 </li>
             </ul>
@@ -102,7 +114,7 @@
 
                     <button type="button" id="sidebarCollapse" class="btn btn-primary">
                         <i class="fas fa-align-left"></i>
-                        <span>Menú</span>
+                        <span></span>
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
@@ -148,7 +160,7 @@
   <script>
     var ctx = document.getElementById("myChart").getContext("2d");
     var myChart = new Chart(ctx, {
-      type: "pie",
+      type: "bar",
       data: {
         labels: ['col1', 'col2', 'col3'],
         datasets: [{
