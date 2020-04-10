@@ -153,8 +153,8 @@ span {
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-    color: #fff;
-    background: #4f0404;
+    color: #ac0808;
+    background: #fff;
 }
 
 a[data-toggle="collapse"] {

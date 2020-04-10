@@ -1,0 +1,39 @@
+
+
+    
+
+            <div class="container text-center" style="width:50vw;">
+              <canvas id="myChart"></canvas>
+            </div>
+         
+
+
+
+  <script>
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ['col1', 'col2', 'col3'],
+        datasets: [{
+          label: 'Num. de datos',
+          data: [10, 8, 15],
+          backgroundColor: [
+            'rgb(66, 134, 244)',
+            'rgb(100, 8, 75)',
+            'rgb(200, 134, 244)'
+          ]
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+          }]
+        }
+      }
+    });
+  </script>
+
