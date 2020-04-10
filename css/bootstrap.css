@@ -74,12 +74,23 @@ body {
   box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.9);
 }
 
+.cerrarSesionR
+{
+  font-size: 0.5em; margin-bottom:0; 
+}
+
+
 .fondo{
   background-color: white;
 }
 .fondo2{
    background: rgb(233, 233, 233);
  }
+
+.iconoSalir{
+
+  transform: rotate(180deg); font-size: 18px;
+}
 
 .rotate {
   animation: rotation 5s infinite linear;
