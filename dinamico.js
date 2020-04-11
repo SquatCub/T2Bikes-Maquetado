@@ -3,6 +3,7 @@ $(document).ready(function (){
         $('#sidebar').toggleClass('active');
     });
 
+    // Funcion Para mostrar Home
     $("#home").click(function()
     {
       miOff();
@@ -19,28 +20,24 @@ $(document).ready(function (){
         });
       });
 
+    // Cuando damos click en competidores y se ponga blanco el fondo
     $("#competidores").click(function()
     {
       miOff();
       this.className = "active";
       });
 
+
+    // Cuando damos click en Entrenadores y se ponga blanco el fondo
     $("#entrenadores").click(function()
     {
       miOff();
       this.className = "active";
-        $.ajax({
-          url: "entrenadores.html" ,
-          success: function(data){
-            setTimeout(function(){
-              $("#mostrador").html(data);
-            }
-          );
-        }
-        });
 
-      });
+   });
 
+
+    // Funcion para mostrar  Reportes
     $("#reportes").click(function()
     {
       miOff();
@@ -55,6 +52,8 @@ $(document).ready(function (){
         });
       });
 
+
+    // Funcion para mostrar  Estadisticas
     $("#estadisticas").click(function()
     {
       miOff();
@@ -71,27 +70,15 @@ $(document).ready(function (){
       });
 
 
-      $("#nuevo").click(function()
-      {
-        miOff();
-        this.className = "active";
-          $.ajax({
-            url: "estadisticas.html" ,
-            success: function(data){
-              setTimeout(function(){
-                $("#mostrador").html(data);
-              }
-            );
-          }
-          });
-        });
-
     $("#competencias").click(function()
     {
       miOff();
       this.className = "active";
     });
 
+
+
+    // Funcion para mostrar lista de Competidores
     $("#lista-competidores").click(function()
     {
       miOff();
@@ -107,12 +94,51 @@ $(document).ready(function (){
         });
       });
 
+
+
+    // Funcion para mostrar  Form de Nuevo Competidor
     $("#registrar-competidor").click(function()
     {
       miOff();
       this.className = "active";
         $.ajax({
           url: "forms/registrar-competidor.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
+      });
+
+
+
+    // Funcion para mostrar lista de Entrenadores
+    $("#lista-entrenadores").click(function()
+    {
+      miOff();
+      this.className = "active";
+        $.ajax({
+          url: "tables/lista-entrenadores.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
+      });
+
+
+
+    // Funcion para mostrar  Form de Nuevo Entrenador
+    $("#registrar-entrenador").click(function()
+    {
+      miOff();
+      this.className = "active";
+        $.ajax({
+          url: "forms/registrar-entrenador.html" ,
           success: function(data){
             setTimeout(function(){
               $("#mostrador").html(data);
@@ -133,4 +159,6 @@ function miOff()
   document.getElementById('competencias').className = " ";
   document.getElementById('registrar-competidor').className = " ";
   document.getElementById('lista-competidores').className = " ";
+  document.getElementById('registrar-entrenador').className = " ";
+  document.getElementById('lista-entrenadores').className = " ";
 }

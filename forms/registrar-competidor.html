@@ -1,4 +1,4 @@
-<h3>Registrar un nuevo competidor</h3>
+<h3>Registrar un Nuevo Competidor</h3>
 <br>
 <form>
   <div class="form-row">
@@ -15,11 +15,44 @@
       <input type="text" class="form-control" id="inputAddress" placeholder="">
     </div>
   </div>
-  <div class="container>
-    <div class="form-group col-md-6">
+  <div class="form-row">
+    <div class="form-group col-md-4 mx-auto">
       <label for="inputCity">Numero de Competidor</label>
       <input type="text" class="form-control" id="inputCity" placeholder="XXX-XXX-XXX">
+    </div>
   </div>
-  <br>
+  <div class="form-row">
+
+    <div class="form-group col-md-4">
+      <label for="inputCity">Competencia</label>
+      <select class="form-control">
+          <option>Sin Asignar</option>
+          <option>Tour Morelia 2020</option>
+          <option>Racing Mountain</option>
+          <option>Los Azufres 40k</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="inputCity">Entrenador</label>
+      <select class="form-control">
+          <option>Sin Asignar</option>
+          <option>Raul Barajas Fierros</option>
+          <option>Rafael Silva Campos</option>
+          <option>Julieta Venegas</option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="inputCity">Tiempo de Entrenamiento</label>
+
+      <div class="d-flex w-50 mx-auto">
+        <input type="number" class="form-control" id="inputCity" min="0" max="18" placeholder="0">
+        <label class="mt-auto ml-3">Meses</label>
+      </div>
+    </div>
+  </div>
+
+  
   <button type="submit" class="btn btn-primary">Registrar</button>
 </form>
