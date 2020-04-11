@@ -92,6 +92,21 @@ $(document).ready(function (){
       this.className = "active";
     });
 
+    $("#lista-competidores").click(function()
+    {
+      miOff();
+      this.className = "active";
+        $.ajax({
+          url: "tables/lista-competidores.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
+      });
+
     $("#registrar-competidor").click(function()
     {
       miOff();
@@ -106,11 +121,7 @@ $(document).ready(function (){
         }
         });
       });
-
-
-
 });
-
 
 function miOff()
 {
@@ -121,4 +132,5 @@ function miOff()
   document.getElementById('estadisticas').className = " ";
   document.getElementById('competencias').className = " ";
   document.getElementById('registrar-competidor').className = " ";
+  document.getElementById('lista-competidores').className = " ";
 }
