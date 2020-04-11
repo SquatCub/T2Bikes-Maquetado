@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>T2 Bikes</title>
-
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Our Custom CSS -->
@@ -47,10 +47,19 @@
                 </li>
 
                 <li class="mt-1 text-center" id="competidores">
-                    <a href="#">
+                    <a href="#pageCompetidores" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="demo-icon icon-bicycle"></i>
                         <span class="CTAs">Competidores</span>
                     </a>
+
+                    <ul class="collapse list-unstyled" id="pageCompetidores">
+                        <li>
+                            <a href="#">Inscritos</a>
+                        </li>
+                        <li id="registrar-competidor">
+                            <a>Nuevo</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="mt-1" id="entrenadores">
@@ -92,7 +101,7 @@
                     </ul>
                 </li>
 
-                
+
             </ul>
 
             <div class="d-lg-block d-md-block d-sm-none">
@@ -150,12 +159,12 @@
                 <h2>Bienvenido Usuario</h2>
                 <h4>Estas logeado como: Administrador</h4>
                 <p>Recuerda cerrar sesión siempre</p>
-              
+
             </div>
         </div>
     </div>
 
-    
+
 </body>
 
 

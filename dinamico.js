@@ -1,14 +1,10 @@
-
-$(document).ready(function () 
-{
+$(document).ready(function (){
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
 
-
-    $("#home").click(function() 
+    $("#home").click(function()
     {
-
       miOff();
       this.className = "active";
         $.ajax({
@@ -20,94 +16,101 @@ $(document).ready(function ()
             }
           );
         }
-
         });
-
       });
 
-    $("#competidores").click(function() 
+    $("#competidores").click(function()
     {
       miOff();
       this.className = "active";
-        $.ajax({
-          url: "competidores.html" ,
-
-          success: function(data){
-            setTimeout(function(){
-              $("#mostrador").html(data);
-            }
-          );
-        }
-
-        });
-
       });
 
-    $("#entrenadores").click(function() 
+    $("#entrenadores").click(function()
     {
-
       miOff();
       this.className = "active";
         $.ajax({
           url: "entrenadores.html" ,
-
           success: function(data){
             setTimeout(function(){
               $("#mostrador").html(data);
             }
           );
         }
-
         });
 
       });
 
-    $("#reportes").click(function() 
+    $("#reportes").click(function()
     {
-
       miOff();
       this.className = "active";
         $.ajax({
           url: "reportes.html" ,
-
           success: function(data){
             setTimeout(function(){
               $("#mostrador").html(data);
-            }
-          );
-        }
-
+            });
+          }
         });
-
       });
 
-    $("#estadisticas").click(function() 
+    $("#estadisticas").click(function()
     {
-
       miOff();
       this.className = "active";
         $.ajax({
           url: "estadisticas.html" ,
-
           success: function(data){
             setTimeout(function(){
               $("#mostrador").html(data);
             }
           );
         }
-
         });
-
       });
 
-    $("#competencias").click(function() 
+
+      $("#nuevo").click(function()
+      {
+        miOff();
+        this.className = "active";
+          $.ajax({
+            url: "estadisticas.html" ,
+            success: function(data){
+              setTimeout(function(){
+                $("#mostrador").html(data);
+              }
+            );
+          }
+          });
+        });
+
+    $("#competencias").click(function()
     {
-      
       miOff();
       this.className = "active";
     });
 
+    $("#registrar-competidor").click(function()
+    {
+      miOff();
+      this.className = "active";
+        $.ajax({
+          url: "forms/registrar-competidor.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
+      });
+
+
+
 });
+
 
 function miOff()
 {
@@ -117,6 +120,5 @@ function miOff()
   document.getElementById('reportes').className = " ";
   document.getElementById('estadisticas').className = " ";
   document.getElementById('competencias').className = " ";
+  document.getElementById('registrar-competidor').className = " ";
 }
-
-
