@@ -1,0 +1,44 @@
+<h3>Perfil de competidor 842154</h3>
+<h5>Nombre: Carlos Castro Cázares</h5>
+<h6>Entrenador: Raul Barajas Fierros</h6>
+<p>Tiempo entrenando: 4 meses</p>
+<br>
+<h4>Competencias</h4>
+<div class="card text-center" style="color:white;">
+  <div class="card-header bg-dark">
+    Tour Morelia 2020
+  </div>
+  <div class="card-body"  style="color:black;">
+    <p class="card-text">Puntaje global: 30 puntos</p>
+    <a  style="color:white;" onclick="getStat();" class="btn btn-primary">Ver estadísticas</a>
+  </div>
+</div>
+
+
+<ul class="d-flex align-items-end flex-column fixed-bottom" style="color: white;">
+  <li id="registrar-entrenador" class="p-2">
+    <a type="button" class="btn btn-warning">Editar datos</a>
+    <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Eliminar competidor</a>
+  </li>
+</ul>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar competidor</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta acción no se podrá deshacer</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>

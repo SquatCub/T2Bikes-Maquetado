@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr id="tab">
+    <tr onclick="getComp();">
       <td data-label="Nombre">Carlos</td>
       <td data-label="Paterno">Castro</td>
       <td data-label="Materno">Cázares</td>
@@ -36,3 +36,9 @@
     </tr>
   </tbody>
 </table>
+
+<ul class="d-flex align-items-end flex-column fixed-bottom" style="color: white;">
+  <li id="registrar-entrenador" class="p-2">
+    <a type="button" onclick="newComp();" class="btn btn-primary">Reistrar nuevo</a>
+  </li>
+</ul>

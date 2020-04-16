@@ -1,26 +1,24 @@
-
-
-           
+<h3>Perfil de competidor 842154</h3>
+<h5>Nombre: Carlos Castro Cázares</h5>
+<br><br>
              	<div class="container text-center">
 	              <canvas id="myChart"></canvas>
 	            </div>
-           
-
-
 
   <script>
     var ctx = document.getElementById("myChart").getContext("2d");
     var myChart = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ['col1', 'col2', 'col3'],
+        labels: ['Diego Zamora', 'Carlos Jahir', 'Alan Cardiel', 'Brandon Rodriguez'],
         datasets: [{
-          label: 'Num. de datos',
-          data: [10, 8, 15],
+          label: 'Rendimiento',
+          data: [20, 18, 15, 5],
           backgroundColor: [
             'rgb(66, 134, 244)',
             'rgb(100, 8, 75)',
-            'rgb(200, 134, 244)'
+            'rgb(200, 134, 244)',
+            'rgb(247, 218, 19)'
           ]
         }]
       },
@@ -35,4 +33,3 @@
       }
     });
   </script>
-

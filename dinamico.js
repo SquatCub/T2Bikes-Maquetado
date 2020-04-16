@@ -25,6 +25,15 @@ $(document).ready(function (){
     {
       miOff();
       this.className = "active";
+        $.ajax({
+          url: "tables/lista-competidores.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
       });
 
 
@@ -33,7 +42,15 @@ $(document).ready(function (){
     {
       miOff();
       this.className = "active";
-
+        $.ajax({
+          url: "tables/lista-entrenadores.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
    });
 
 
@@ -59,7 +76,7 @@ $(document).ready(function (){
       miOff();
       this.className = "active";
         $.ajax({
-          url: "estadisticas.html" ,
+          url: "perfil-competidor.html" ,
           success: function(data){
             setTimeout(function(){
               $("#mostrador").html(data);
@@ -74,6 +91,30 @@ $(document).ready(function (){
     {
       miOff();
       this.className = "active";
+      $.ajax({
+        url: "tables/lista-competencias.html" ,
+        success: function(data){
+          setTimeout(function(){
+            $("#mostrador").html(data);
+          }
+        );
+      }
+      });
+    });
+
+    $("#tab").click(function()
+    {
+      miOff();
+      this.className = "active";
+      $.ajax({
+        url: "perfil-competidor.html" ,
+        success: function(data){
+          setTimeout(function(){
+            $("#mostrador").html(data);
+          }
+        );
+      }
+      });
     });
 
 
@@ -154,11 +195,65 @@ function miOff()
   document.getElementById('home').className = " ";
   document.getElementById('competidores').className = " ";
   document.getElementById('entrenadores').className = " ";
-  document.getElementById('reportes').className = " ";
-  document.getElementById('estadisticas').className = " ";
+  /*document.getElementById('reportes').className = " ";
+  document.getElementById('estadisticas').className = " ";*/
   document.getElementById('competencias').className = " ";
-  document.getElementById('registrar-competidor').className = " ";
+  /*document.getElementById('registrar-competidor').className = " ";
   document.getElementById('lista-competidores').className = " ";
   document.getElementById('registrar-entrenador').className = " ";
-  document.getElementById('lista-entrenadores').className = " ";
+  document.getElementById('lista-entrenadores').className = " ";*/
+}
+
+
+/*------------Funciones genericas------------*/
+function getStat(){
+  this.className = 'active';
+  $.ajax({
+    url: 'estadisticas.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
+
+function getComp(){
+  this.className = 'active';
+  $.ajax({
+    url: 'perfil-competidor.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
+
+function newComp(){
+  this.className = 'active';
+  $.ajax({
+    url: 'forms/registrar-competidor.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
+
+function newTrain(){
+  this.className = 'active';
+  $.ajax({
+    url: 'forms/registrar-entrenador.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
 }
