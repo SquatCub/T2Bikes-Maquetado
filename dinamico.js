@@ -231,6 +231,30 @@ function getComp(){
   }
   });
 }
+function getEntre(){
+  this.className = 'active';
+  $.ajax({
+    url: 'perfil-entrenador.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
+function getTour(){
+  this.className = 'active';
+  $.ajax({
+    url: 'tour.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
 
 function newComp(){
   this.className = 'active';
