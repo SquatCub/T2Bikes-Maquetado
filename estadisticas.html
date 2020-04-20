@@ -1,68 +1,46 @@
-<h3>Perfil de competidor 842154</h3>
+<h3>Perfil del Competidor</h3>
+<h3>"842154"</h3>
 <h5>Nombre: Carlos Castro Cázares</h5>
 <br><br>
-             	<div class="container text-center">
-                <h4>Carrera 1</h4>
-	              <canvas id="myChart"></canvas>
-                <h4>Carrera 2</h4>
-                <canvas id="myChart2"></canvas>
+             	<div class="container text-center mb-5">
+                <h4>Tour Morelia 2020</h4>
+
+                <div id="contenedorGrafica">
+	                <canvas id="grafica-bar"></canvas>
+                  <script>
+                    var ctx = document.getElementById("grafica-bar").getContext("2d");
+                    var myChart = new Chart(ctx, {
+                      type: "bar",
+                      data: {
+                        labels: ['Carrera #1', 'Carrera #1', 'Carrera #3', 'Carrera #4'],
+                        datasets: [{
+                          label: 'Rendimiento',
+                          data: [12, 18, 7, 15],
+                          backgroundColor: [
+                            'rgb(66, 134, 244)',
+                            'rgb(100, 8, 75)',
+                            'rgb(200, 134, 244)',
+                            'rgb(247, 218, 19)'
+                          ]
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          yAxes: [{
+                              ticks: {
+                                beginAtZero: true
+                              }
+                          }]
+                        }
+                      }
+                    });
+                  </script>
+                </div>
 	            </div>
 
 
-  <script>
-    var ctx = document.getElementById("myChart").getContext("2d");
-    var myChart = new Chart(ctx, {
-      type: "bar",
-      data: {
-        labels: ['Diego Zamora', 'Carlos Jahir', 'Alan Cardiel', 'Brandon Rodriguez'],
-        datasets: [{
-          label: 'Rendimiento',
-          data: [20, 18, 15, 5],
-          backgroundColor: [
-            'rgb(66, 134, 244)',
-            'rgb(100, 8, 75)',
-            'rgb(200, 134, 244)',
-            'rgb(247, 218, 19)'
-          ]
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-              ticks: {
-                beginAtZero: true
-              }
-          }]
-        }
-      }
-    });
-  </script>
 
-  <script>
-    var ctx = document.getElementById("myChart2").getContext("2d");
-    var myChart = new Chart(ctx, {
-      type: "bar",
-      data: {
-        labels: ['Diego Zamora', 'Carlos Jahir', 'Alan Cardiel', 'Brandon Rodriguez'],
-        datasets: [{
-          label: 'Rendimiento',
-          data: [10, 7, 21, 12],
-          backgroundColor: [
-            'rgb(66, 134, 244)',
-            'rgb(100, 8, 75)',
-            'rgb(200, 134, 244)',
-            'rgb(247, 218, 19)'
-          ]
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-              ticks: {
-                beginAtZero: true
-              }
-          }]
-        }
-      }
-    });
-  </script>
+              <button onclick="cambiarGrafica()">Jalo</button>
+  
+
+

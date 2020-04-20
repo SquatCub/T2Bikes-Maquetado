@@ -1,4 +1,12 @@
-$(document).ready(function (){
+
+// Variables Globales
+var grafica = "bar";
+
+
+
+$(document).ready(function ()
+{
+    // Funcion para el menu
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
@@ -188,6 +196,7 @@ $(document).ready(function (){
         }
         });
       });
+
 });
 
 function miOff()
@@ -280,4 +289,34 @@ function newTrain(){
     );
   }
   });
+}
+
+function cambiarGrafica()
+{
+  if(grafica == "bar")
+  {
+    grafica = "pie";
+    $.ajax({
+      url: 'graficas/pai.html' ,
+      success: function(data){
+        setTimeout(function(){
+          $('#contenedorGrafica').html(data);
+        }
+      );
+    }
+    });
+  }
+  else
+  {
+    grafica = "bar";
+    $.ajax({
+      url: 'graficas/bar.html' ,
+      success: function(data){
+        setTimeout(function(){
+          $('#contenedorGrafica').html(data);
+        }
+      );
+    }
+    });
+  }
 }
