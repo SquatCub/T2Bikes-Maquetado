@@ -305,6 +305,7 @@ function cambiarGrafica()
       );
     }
     });
+    document.getElementById('btn-cambiarGrafica').innerText = "Cambiar a Grafica de Barras";
   }
   else
   {
@@ -318,6 +319,8 @@ function cambiarGrafica()
       );
     }
     });
+    document.getElementById('btn-cambiarGrafica').innerText = "Cambiar a Grafica de Pastel";
   }
+  $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
 }
 

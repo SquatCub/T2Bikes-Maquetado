@@ -3,8 +3,46 @@
 <h5>Nombre: Carlos Castro Cázares</h5>
 <br><br>
              	<div class="container text-center mb-5">
-                <h4>Tour Morelia 2020</h4>
 
+                <h4>Tour Morelia 2020</h4>
+                <table class="mx-auto w-75">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nombre de la Carrera</th>
+                      <th scope="col">Lugar de llegada</th>
+                      <th scope="col">Puntaje</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Nombre de la Carrera">Carrera #1</td>
+                      <td data-label="Lugar de llegada">5 lugar</td>
+                      <td data-label="Puntaje">12</td>
+                      <td data-label="Status">Si Terminó la Carrera</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Nombre de la Carrera">Carrera #2</td>
+                      <td data-label="Lugar de llegada">3 lugar</td>
+                      <td data-label="Puntaje">18</td>
+                      <td data-label="Status">Si Terminó la Carrera</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Nombre de la Carrera">Carrera #3</td>
+                      <td data-label="Lugar de llegada">10 lugar</td>
+                      <td data-label="Puntaje">7</td>
+                      <td data-label="Status">Si Terminó la Carrera</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Nombre de la Carrera">Carrera #4</td>
+                      <td data-label="Lugar de llegada">6 lugar</td>
+                      <td data-label="Puntaje">15</td>
+                      <td data-label="Status">Si Terminó la Carrera</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h4 class="mt-5">Grafica</h4>
                 <div id="contenedorGrafica">
 	                <canvas id="grafica-bar"></canvas>
                   <script>
@@ -40,7 +78,7 @@
 
 
 
-              <button onclick="cambiarGrafica()">Jalo</button>
+              <button class="btn btn-primary btn-md" id="btn-cambiarGrafica" onclick="cambiarGrafica()">Cambiar a Grafica de Pastel</button>
   
 
 
