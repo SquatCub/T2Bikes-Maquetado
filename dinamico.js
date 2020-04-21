@@ -278,10 +278,49 @@ function newComp(){
   });
 }
 
+function editComp(){
+  this.className = 'active';
+  $.ajax({
+    url: 'forms/editar-competidor.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
+
+function editEntre(){
+  this.className = 'active';
+  $.ajax({
+    url: 'forms/editar-entrenador.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
+
 function newTrain(){
   this.className = 'active';
   $.ajax({
     url: 'forms/registrar-entrenador.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
+
+function newCompet(){
+  this.className = 'active';
+  $.ajax({
+    url: 'forms/registrar-competencia.html' ,
     success: function(data){
       setTimeout(function(){
         $('#mostrador').html(data);
@@ -323,4 +362,3 @@ function cambiarGrafica()
   }
   $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
 }
-
