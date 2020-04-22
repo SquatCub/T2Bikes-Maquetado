@@ -5,6 +5,7 @@
              	<div class="container text-center mb-5">
 
                 <h4>Tour Morelia 2020</h4>
+                <p>Seleccione una para asignar/restar puntos</p>
                 <table class="mx-auto w-75">
                   <thead>
                     <tr>
@@ -15,29 +16,29 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#modalCarrera">
                       <td data-label="Nombre de la Carrera">Carrera #1</td>
                       <td data-label="Lugar de llegada">5 lugar</td>
                       <td data-label="Puntaje">12</td>
                       <td data-label="Status">Si Terminó la Carrera</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#modalCarrera">
                       <td data-label="Nombre de la Carrera">Carrera #2</td>
                       <td data-label="Lugar de llegada">3 lugar</td>
                       <td data-label="Puntaje">18</td>
                       <td data-label="Status">Si Terminó la Carrera</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#modalCarrera">
                       <td data-label="Nombre de la Carrera">Carrera #3</td>
                       <td data-label="Lugar de llegada">10 lugar</td>
                       <td data-label="Puntaje">7</td>
-                      <td data-label="Status">Si Terminó la Carrera</td>
+                      <td data-label="Status">No Terminó la Carrera</td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#modalCarrera">
                       <td data-label="Nombre de la Carrera">Carrera #4</td>
                       <td data-label="Lugar de llegada">6 lugar</td>
                       <td data-label="Puntaje">15</td>
-                      <td data-label="Status">Si Terminó la Carrera</td>
+                      <td data-label="Status">En Curso</td>
                     </tr>
                   </tbody>
                 </table>
@@ -79,6 +80,32 @@
 
 
               <button class="btn btn-primary btn-md" id="btn-cambiarGrafica" onclick="cambiarGrafica()">Cambiar a Grafica de Pastel</button>
-  
 
-
+              <div class="modal fade" id="modalCarrera" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Asignar Puntos</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <label for="inputAddress">Puntos a asignar/restar:</label><br>
+                      <input type="number" value="0" min="-50" max="1000" step="1"/><br><br>
+                      <label for="inputAddress">¿Terminó la carrera?</label><br>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-warning">En Curso</button>
+                        <button type="button" class="btn btn-success">Si terminó</button>
+                        <button type="button" class="btn btn-danger">No terminó</button>
+                      </div><br><br>
+                      <label for="inputAddress">Lugar de llegada</label><br>
+                      <input type="number" value="5" min="0" max="1000" step="1"/>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Asignar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>

@@ -1,0 +1,33 @@
+<h3>Usuarios Registrados</h3>
+<p>Seleccione uno para poder editarlo</p>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Usuario</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Contraseña</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr onclick="getUser();">
+      <td data-label="Usuario">Diego56</td>
+      <td data-label="Nombre">Diego Zamora</td>
+      <td data-label="Tipo">Administrador</td>
+      <td data-label="Contraseña">123456</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Usuario">BranRgz199</td>
+      <td data-label="Nombre">Brandon Rodriguez</td>
+      <td data-label="Tipo">Básico</td>
+      <td data-label="Contraseña">451789</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul class="d-flex align-items-end flex-column fixed-bottom" style="color: white;">
+  <li id="registrar-usuario" class="p-2">
+    <a type="button" onclick="newUser();" class="btn btn-primary">Reistrar nuevo</a>
+  </li>
+</ul>

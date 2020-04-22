@@ -179,7 +179,20 @@ $(document).ready(function ()
         });
       });
 
-
+      $("#sistema").click(function()
+      {
+        miOff();
+        this.className = "active";
+        $.ajax({
+          url: "tables/lista-usuarios.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
+      });
 
     // Funcion para mostrar  Form de Nuevo Entrenador
     $("#registrar-entrenador").click(function()
@@ -207,6 +220,7 @@ function miOff()
   /*document.getElementById('reportes').className = " ";
   document.getElementById('estadisticas').className = " ";*/
   document.getElementById('competencias').className = " ";
+  document.getElementById('sistema').className = " ";
   /*document.getElementById('registrar-competidor').className = " ";
   document.getElementById('lista-competidores').className = " ";
   document.getElementById('registrar-entrenador').className = " ";
@@ -264,6 +278,30 @@ function getTour(){
   }
   });
 }
+function getUser(){
+  this.className = 'active';
+  $.ajax({
+    url: 'perfil-usuario.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
+function getCarrera(){
+  this.className = 'active';
+  $.ajax({
+    url: 'perfil-carrera.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
 
 function newComp(){
   this.className = 'active';
@@ -308,6 +346,19 @@ function newTrain(){
   this.className = 'active';
   $.ajax({
     url: 'forms/registrar-entrenador.html' ,
+    success: function(data){
+      setTimeout(function(){
+        $('#mostrador').html(data);
+      }
+    );
+  }
+  });
+}
+
+function newUser(){
+  this.className = 'active';
+  $.ajax({
+    url: 'forms/registrar-usuario.html' ,
     success: function(data){
       setTimeout(function(){
         $('#mostrador').html(data);

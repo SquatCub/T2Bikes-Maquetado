@@ -1,0 +1,63 @@
+<h3>Perfil del Usuario</h3>
+<h5>Nombre: Diego Zamora</h5>
+
+<br>
+
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputEmail4">Nombre</label>
+      <input type="text" class="form-control" id="inputEmail4" value="Diego Zamora" placeholder="">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputPassword4">Nombre de usuario</label>
+      <input type="text" class="form-control" id="inputPassword4" value="Diego56" placeholder="">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputAddress">Tipo</label>
+      <select class="form-control">
+          <option>Sin Asignar</option>
+          <option selected>Administrador</option>
+          <option>Básico</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+      <div class="form-group col-md-4 mx-auto">
+        <label for="inputCity">Contraseña</label>
+        <input type="text" class="form-control" id="inputCity" value="123456" placeholder="">
+      </div>
+  </div>
+
+<br>
+
+  <button type="submit" class="btn btn-danger">Cancelar</button>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+<ul class="d-flex align-items-end flex-column fixed-bottom text-white">
+  <li id="registrar-entrenador" class="p-2">
+    <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Eliminar usuario</a>
+  </li>
+</ul>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Esta acción no se podrá deshacer, el usuario ya no tendrá acceso al sistema.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
