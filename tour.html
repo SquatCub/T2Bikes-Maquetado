@@ -1,8 +1,21 @@
-<h3>Tour Morelia 2020</h3>
+<div class="row">
+
+<div class="text-left col-md-2">
+  <a onclick="competencias()" type="button" href="#" class="bg-primary border border-primary rounded p-1 superBoton text-left text-success">
+  <i class="align-middle fas fa-arrow-left text-white" style="font-size: 24px;"></i>
+    <label class="mt-2 text-white d-md-inline" style="cursor: pointer; font-size: 15px;">Atras</label>
+  </a>
+</div>
+
+<h3 class="col-md-8 mt-lg-auto mt-md-3 mt-sm-4 mt-4">Tour Morelia 2020</h3>
+
+</div>
+
+
 <h6>Status: Activa</h6>
 <a href="reporte.pdf" download="reporte" class="btn btn-warning">Descargar reporte</a>
 <br><br>
-<h4>Competidores</h4>
+<h4>Puntajes Gobales de la Competecia</h4>
 <table>
   <thead>
     <tr>
@@ -33,9 +46,52 @@
     </tr>
   </tbody>
 </table>
-<hr>
+<h4 class="mt-5">Grafica</h4>
+          <div id="contenedorGrafica-competencia">
+            <canvas id="competencia-grafica-bar"></canvas>
+            <script>
+              var ctx = document.getElementById("competencia-grafica-bar").getContext("2d");
+              var myChart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                  labels: ['Carlos Castro Cázares', 'Brandon Rodriguez Molina', 'Diego Zamora Delgado'],
+                  datasets: [{
+                    label: 'Rendimiento',
+                    data: [42, 36, 35],
+                    backgroundColor: [
+                      'rgb(66, 134, 244)',
+                      'rgb(100, 8, 75)',
+                      'rgb(200, 134, 244)',
+                      'rgb(247, 218, 19)'
+                    ]
+                  }]
+                },
+                options: {
+                  scales: {
+                    yAxes: [{
+                        ticks: {
+                          beginAtZero: true
+                        }
+                    }]
+                  }
+                }
+              });
+            </script>
+          </div>
+        </div>
+
+<div class="w-100">
+  <div class="justify-content-center mt-3 d-flex mx-auto">
+    <button class="btn btn-primary btn-md" id="btn-cambiarGrafica-competencia" onclick="grafCompetencia()">
+    Cambiar a Grafica de Pastel</button>
+  </div>
+</div>
+
+
+
+
 <br>
-<h4>Carreras</h4>
+<h4 class="mt-3">Carreras</h4>
 <div class="card text-center" style="color:white;">
   <div class="card-header bg-dark">
     Carrera 1

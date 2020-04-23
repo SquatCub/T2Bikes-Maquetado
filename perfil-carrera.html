@@ -1,4 +1,16 @@
-<h3>Tour Morelia 2020</h3>
+<div class="row">
+
+<div class="text-left col-md-2">
+  <a onclick="getTour()" type="button" href="#" class="bg-primary border border-primary rounded p-1 superBoton text-left text-success">
+  <i class="align-middle fas fa-arrow-left text-white" style="font-size: 24px;"></i>
+    <label class="mt-2 text-white d-md-inline" style="cursor: pointer; font-size: 15px;">Atras</label>
+  </a>
+</div>
+
+<h3 class="col-md-8 mt-lg-auto mt-md-3 mt-sm-4 mt-4">Tour Morelia 2020</h3>
+
+</div>
+
 <h4>Carrera 1</h4>
 <h6>Acueducto a Camelinas 10km</h6>
 <br>
@@ -42,46 +54,46 @@
 </table><br>
 
 
-                <h4 class="mt-5">Grafica</h4>
-                <div id="contenedorGrafica">
-                  <canvas id="carrera-grafica-bar"></canvas>
-                  <script>
-                    var ctx = document.getElementById("carrera-grafica-bar").getContext("2d");
-                    var myChart = new Chart(ctx, {
-                      type: "bar",
-                      data: {
-                        labels: ['Carlos Castro Cázares', 'Brandon Rodriguez Molina', 'Diego Zamora Delgado', 'Alan Cardiel'],
-                        datasets: [{
-                          label: 'Puntaje',
-                          data: [12, 8, 5, 2],
-                          backgroundColor: [
-                            'rgb(66, 134, 244)',
-                            'rgb(100, 8, 75)',
-                            'rgb(200, 134, 244)',
-                            'rgb(247, 218, 19)'
-                          ]
-                        }]
-                      },
-                      options: {
-                        scales: {
-                          yAxes: [{
-                              ticks: {
-                                beginAtZero: true
-                              }
-                          }]
-                        }
-                      }
-                    });
-                  </script>
-                </div>
-              </div>
+<h4 class="mt-5">Grafica</h4>
+<div id="contenedorGrafica-carrera">
+  <canvas id="carrera-grafica-bar"></canvas>
+  <script>
+    var ctx = document.getElementById("carrera-grafica-bar").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ['Carlos Castro Cázares', 'Brandon Rodriguez Molina', 'Diego Zamora Delgado', 'Alan Cardiel'],
+        datasets: [{
+          label: 'Puntaje',
+          data: [12, 8, 5, 2],
+          backgroundColor: [
+            'rgb(66, 134, 244)',
+            'rgb(100, 8, 75)',
+            'rgb(200, 134, 244)',
+            'rgb(247, 218, 19)'
+          ]
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+          }]
+        }
+      }
+    });
+  </script>
+</div>
+</div>
 
-              <div class="w-100">
-                <div class="justify-content-center mt-3 d-flex mx-auto">
-                  <button class="btn btn-primary btn-md" id="btn-cambiarGrafica" onclick="cambiarGrafica()">Cambiar a Grafica de Pastel</button>
-                  <button type="button" class="btn btn-warning ml-2">Descargar Reporte</button>
-                </div>
-              </div><br><br>
+<div class="w-100">
+<div class="justify-content-center mt-3 d-flex mx-auto">
+  <button class="btn btn-primary btn-md" id="btn-cambiarGrafica-carrera" onclick="grafCarrera()">Cambiar a Grafica de Pastel</button>
+  <button type="button" class="btn btn-warning ml-2">Descargar Reporte</button>
+</div>
+</div><br><br>
 
 <a type="button" class="btn btn-danger" data-toggle="modal" style="color:white;" data-target="#modalCar"">Eliminar carrera</a>
 

@@ -244,6 +244,55 @@ function getStat(){
   });
 }
 
+function competidores(){
+        $.ajax({
+          url: "tables/lista-competidores.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
+}
+
+
+function entrenadores(){
+        $.ajax({
+          url: "tables/lista-entrenadores.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
+}
+
+function competencias(){
+        $.ajax({
+          url: "tables/lista-competencias.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
+}
+
+function usuarios(){
+        $.ajax({
+          url: "tables/lista-usuarios.html" ,
+          success: function(data){
+            setTimeout(function(){
+              $("#mostrador").html(data);
+            }
+          );
+        }
+        });
+}
+
 function getComp(){
   this.className = 'active';
   $.ajax({
@@ -387,7 +436,7 @@ function newCompet(){
 /*------------Funciones Para Graficas ------------*/
 
 // Funcion Para convertir Grafica (Competidor Competencia)
-function graficaCompetidor()
+function grafCompetidor()
 {
   if(graficaCompetidor == "bar")
   {
@@ -423,72 +472,72 @@ function graficaCompetidor()
 
 
 // Funcion Para convertir Grafica (Competencia)
-function graficaCompetencia()
+function grafCompetencia()
 {
   if(graficaCompetencia == "bar")
   {
     graficaCompetencia = "pie";
     $.ajax({
-      url: 'graficas/pai.html' ,
+      url: 'graficas/competencia-pai.html' ,
       success: function(data){
         setTimeout(function(){
-          $('#contenedorGrafica').html(data);
+          $('#contenedorGrafica-competencia').html(data);
         }
       );
     }
     });
-    document.getElementById('btn-cambiarGrafica').innerText = "Cambiar a Grafica de Barras";
+    document.getElementById('btn-cambiarGrafica-competencia').innerText = "Cambiar a Grafica de Barras";
   }
   else
   {
     graficaCompetencia = "bar";
     $.ajax({
-      url: 'graficas/bar.html' ,
+      url: 'graficas/competencia-bar.html' ,
       success: function(data){
         setTimeout(function(){
-          $('#contenedorGrafica').html(data);
+          $('#contenedorGrafica-competencia').html(data);
         }
       );
     }
     });
-    document.getElementById('btn-cambiarGrafica').innerText = "Cambiar a Grafica de Pastel";
+    document.getElementById('btn-cambiarGrafica-competencia').innerText = "Cambiar a Grafica de Pastel";
   }
-  $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
+  $('html,body').animate({scrollTop: document.body.scrollHeight/4},"fast");
 }
 
 
 
 
 // Funcion Para convertir Grafica (Carrera)
-function graficaCarrera()
+function grafCarrera()
 {
   if(graficaCarrera == "bar")
   {
     graficaCarrera = "pie";
     $.ajax({
-      url: 'graficas/pai.html' ,
+      url: 'graficas/carrera-pai.html' ,
       success: function(data){
         setTimeout(function(){
-          $('#contenedorGrafica').html(data);
+          $('#contenedorGrafica-carrera').html(data);
         }
       );
     }
     });
-    document.getElementById('btn-cambiarGrafica').innerText = "Cambiar a Grafica de Barras";
+    document.getElementById('btn-cambiarGrafica-carrera').innerText = "Cambiar a Grafica de Barras";
   }
   else
   {
     graficaCarrera = "bar";
     $.ajax({
-      url: 'graficas/bar.html' ,
+      url: 'graficas/carrera-bar.html' ,
       success: function(data){
         setTimeout(function(){
-          $('#contenedorGrafica').html(data);
+          $('#contenedorGrafica-carrera').html(data);
         }
       );
     }
     });
-    document.getElementById('btn-cambiarGrafica').innerText = "Cambiar a Grafica de Pastel";
+    document.getElementById('btn-cambiarGrafica-carrera').innerText = "Cambiar a Grafica de Pastel";
   }
   $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
 }
