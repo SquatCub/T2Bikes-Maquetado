@@ -44,10 +44,10 @@
                 </table>
 
                 <h4 class="mt-5">Grafica</h4>
-                <div id="contenedorGrafica">
-	                <canvas id="grafica-bar"></canvas>
+                <div id="contenedorGrafica-competidor">
+	                <canvas id="competidor-grafica-bar"></canvas>
                   <script>
-                    var ctx = document.getElementById("grafica-bar").getContext("2d");
+                    var ctx = document.getElementById("competidor-grafica-bar").getContext("2d");
                     var myChart = new Chart(ctx, {
                       type: "bar",
                       data: {
@@ -79,10 +79,13 @@
 
               <div class="w-100">
                 <div class="justify-content-center mt-3 d-flex mx-auto">
-                  <button class="btn btn-primary btn-md" id="btn-cambiarGrafica" onclick="cambiarGrafica()">Cambiar a Grafica de Pastel</button>
+                  <button class="btn btn-primary btn-md" id="btn-cambiarGrafica-competidor" onclick="graficaCompetidor()">Cambiar a Grafica de Pastel</button>
                   <button type="button" class="btn btn-warning ml-2">Descargar Reporte</button>
                 </div>
               </div>
+
+
+
               <div class="modal fade" id="modalCarrera" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">

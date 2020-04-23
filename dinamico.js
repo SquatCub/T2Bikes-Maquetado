@@ -1,6 +1,8 @@
 
 // Variables Globales
-var grafica = "bar";
+var graficaCompetidor = "bar";
+var graficaCompetencia = "bar";
+var graficaCarrera = "bar";
 
 
 
@@ -381,11 +383,51 @@ function newCompet(){
   });
 }
 
-function cambiarGrafica()
+
+/*------------Funciones Para Graficas ------------*/
+
+// Funcion Para convertir Grafica (Competidor Competencia)
+function graficaCompetidor()
 {
-  if(grafica == "bar")
+  if(graficaCompetidor == "bar")
   {
-    grafica = "pie";
+    graficaCompetidor = "pie";
+    $.ajax({
+      url: 'graficas/competidor-competencia-pai.html' ,
+      success: function(data){
+        setTimeout(function(){
+          $('#contenedorGrafica-competidor').html(data);
+        }
+      );
+    }
+    });
+    document.getElementById('btn-cambiarGrafica-competidor').innerText = "Cambiar a Grafica de Barras";
+  }
+  else
+  {
+    graficaCompetidor = "bar";
+    $.ajax({
+      url: 'graficas/competidor-competencia-bar.html' ,
+      success: function(data){
+        setTimeout(function(){
+          $('#contenedorGrafica-competidor').html(data);
+        }
+      );
+    }
+    });
+    document.getElementById('btn-cambiarGrafica-competidor').innerText = "Cambiar a Grafica de Pastel";
+  }
+  $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
+}
+
+
+
+// Funcion Para convertir Grafica (Competencia)
+function graficaCompetencia()
+{
+  if(graficaCompetencia == "bar")
+  {
+    graficaCompetencia = "pie";
     $.ajax({
       url: 'graficas/pai.html' ,
       success: function(data){
@@ -399,7 +441,44 @@ function cambiarGrafica()
   }
   else
   {
-    grafica = "bar";
+    graficaCompetencia = "bar";
+    $.ajax({
+      url: 'graficas/bar.html' ,
+      success: function(data){
+        setTimeout(function(){
+          $('#contenedorGrafica').html(data);
+        }
+      );
+    }
+    });
+    document.getElementById('btn-cambiarGrafica').innerText = "Cambiar a Grafica de Pastel";
+  }
+  $('html,body').animate({scrollTop: document.body.scrollHeight},"fast");
+}
+
+
+
+
+// Funcion Para convertir Grafica (Carrera)
+function graficaCarrera()
+{
+  if(graficaCarrera == "bar")
+  {
+    graficaCarrera = "pie";
+    $.ajax({
+      url: 'graficas/pai.html' ,
+      success: function(data){
+        setTimeout(function(){
+          $('#contenedorGrafica').html(data);
+        }
+      );
+    }
+    });
+    document.getElementById('btn-cambiarGrafica').innerText = "Cambiar a Grafica de Barras";
+  }
+  else
+  {
+    graficaCarrera = "bar";
     $.ajax({
       url: 'graficas/bar.html' ,
       success: function(data){

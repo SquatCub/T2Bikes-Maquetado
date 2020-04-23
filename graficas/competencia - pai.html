@@ -1,0 +1,29 @@
+<canvas id="grafica-pie"></canvas>
+<script>
+  var ctx = document.getElementById("grafica-pie").getContext("2d");
+  var myChart = new Chart(ctx, {
+    type: "pie",
+    data: {
+      labels: ['Carrera #1', 'Carrera #1', 'Carrera #3', 'Carrera #4'],
+      datasets: [{
+        label: 'Rendimiento',
+        data: [12, 18, 7, 15],
+        backgroundColor: [
+          'rgb(66, 134, 244)',
+          'rgb(100, 8, 75)',
+          'rgb(200, 134, 244)',
+          'rgb(247, 218, 19)'
+        ]
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+        }]
+      }
+    }
+  });
+</script>
