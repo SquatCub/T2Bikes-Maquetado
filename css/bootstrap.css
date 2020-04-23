@@ -64,6 +64,26 @@ body {
   text-align: left;
 }
 
+
+/*--------------------Clases Genericas---------------------*/
+*{
+
+  border: solid 0px #000;
+}
+
+.superBoton
+{
+  background: #e2f2ff;
+}
+
+.superBoton:hover
+{
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+
+
 /*--------------------LOGIN---------------------*/
 .login {
   margin-top: 5%;

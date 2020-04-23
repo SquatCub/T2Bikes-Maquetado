@@ -2,9 +2,14 @@
 <h3>"842154"</h3>
 <h5>Nombre: Carlos Castro Cázares</h5>
 <h5>Fecha de Registro: 01-Marzo-2020</h5>
-<br>
-<h4>Competencias</h4>
-<div class="card text-center text-white">
+
+<div class="text-center mt-3">
+  <button type="button" class="btn btn-warning">Descargar Reporte</button>
+</div><br><br>
+
+<h3 class="font-weight-bold">Competencias</h3>
+
+<div class="card text-center text-white mt-4">
   <div class="card-header bg-dark">
     Tour Morelia 2020
   </div>
@@ -31,10 +36,15 @@
   </div>
 </div>
 
+<div class="text-center mt-5">
+  <a type="button" href="#" class="border border-primary rounded p-1 superBoton text-center text-success" data-toggle="modal" data-target="#exampleModal2">
+    <i class="align-middle fas fa-plus-circle" style="font-size: 20px;"></i>
+    <label class="align-middle mt-2 text-muted" style="cursor: pointer;">Asignar Competencia</label>
+  </a>
+</div>
 
 <ul class="d-flex align-items-end flex-column fixed-bottom text-white">
   <li id="registrar-entrenador" class="p-2">
-    <a type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2">Asignar competencia</a>
     <a type="button" class="btn btn-warning" onclick="editComp();">Editar datos</a>
     <a type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Eliminar competidor</a>
   </li>
@@ -81,8 +91,14 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="inputCity">Entrenador</label>
-          <select class="form-control">
+
+          <div class="m-0 p-0">
+            Entrenador
+          </div>
+          <div class="mt-0 pt-0 text-muted align-top" style="font-size: 14px;">
+            Este entrenador solo guiara al competidor en esta Competencia
+          </div>
+          <select class="form-control mt-2">
               <option>Sin Asignar</option>
               <option>Raul Barajas Fierros</option>
               <option>Rafael Silva Campos</option>

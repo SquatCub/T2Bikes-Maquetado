@@ -77,10 +77,12 @@
                 </div>
 	            </div>
 
-
-
-              <button class="btn btn-primary btn-md" id="btn-cambiarGrafica" onclick="cambiarGrafica()">Cambiar a Grafica de Pastel</button>
-
+              <div class="w-100">
+                <div class="justify-content-center mt-3 d-flex mx-auto">
+                  <button class="btn btn-primary btn-md" id="btn-cambiarGrafica" onclick="cambiarGrafica()">Cambiar a Grafica de Pastel</button>
+                  <button type="button" class="btn btn-warning ml-2">Descargar Reporte</button>
+                </div>
+              </div>
               <div class="modal fade" id="modalCarrera" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -92,7 +94,7 @@
                     </div>
                     <div class="modal-body">
                       <label for="inputAddress">Puntos a asignar/restar:</label><br>
-                      <input type="number" value="0" min="-50" max="1000" step="1"/><br><br>
+                      <input class="form-control w-25 mx-auto" type="number" value="0" min="-50" max="1000" step="1"/><br><br>
                       <label for="inputAddress">¿Terminó la carrera?</label><br>
                       <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-warning">En Curso</button>
@@ -100,7 +102,7 @@
                         <button type="button" class="btn btn-danger">No terminó</button>
                       </div><br><br>
                       <label for="inputAddress">Lugar de llegada</label><br>
-                      <input type="number" value="5" min="0" max="1000" step="1"/>
+                      <input class="form-control w-25 mx-auto" type="number" value="5" min="0" max="1000" step="1"/>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
