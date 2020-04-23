@@ -1,6 +1,6 @@
 <h3>Tour Morelia 2020</h3>
 <h6>Status: Activa</h6>
-<a href="../reporte.pdf" download="reporte" class="btn btn-warning">Descargar reporte</a>
+<a href="reporte.pdf" download="reporte" class="btn btn-warning">Descargar reporte</a>
 <br><br>
 <h4>Competidores</h4>
 <table>
@@ -42,8 +42,8 @@
   </div>
   <div class="card-body"  style="color:black;">
     <h6>Acueducto a Camelinas 10km</h6>
-    <p class="card-text">Participantes: 4</p>
-    <a  style="color:white;" onclick="getCarrera();" class="btn btn-primary">Ver más</a>
+    <p class="card-text">Tipo de Carrera: Montaña</p>
+    <a  style="color:white;" onclick="getCarrera();" class="btn btn-primary">Estadisticas</a>
   </div>
 </div>
 <div class="card text-center" style="color:white;">
@@ -52,8 +52,8 @@
   </div>
   <div class="card-body"  style="color:black;">
     <h6>Tecnológico a Macroplaza 9km</h6>
-    <p class="card-text">Participantes: 7</p>
-    <a  style="color:white;" onclick="getCarrera();" class="btn btn-primary">Ver más</a>
+    <p class="card-text">Tipo de Carrera: Velocidad</p>
+    <a  style="color:white;" onclick="getCarrera();" class="btn btn-primary">Estadisticas</a>
   </div>
 </div>
 <div class="card text-center" style="color:white;">
@@ -62,8 +62,8 @@
   </div>
   <div class="card-body"  style="color:black;">
     <h6>Xangari a La Huerta 17km</h6>
-    <p class="card-text">Participantes: 6</p>
-    <a  style="color:white;" onclick="getCarrera();" class="btn btn-primary">Ver más</a>
+    <p class="card-text">Tipo de Carrera: Terraceria</p>
+    <a  style="color:white;" onclick="getCarrera();" class="btn btn-primary">Estadisticas</a>
   </div>
 </div><br>
 <a type="button" class="btn btn-danger" data-toggle="modal" style="color:white;" data-target="#modalFinalizada"">Eliminar competencia</a>
@@ -86,8 +86,17 @@
       <div class="modal-body">
         <label for="inputAddress">Nombre de la carrera</label>
         <input type="text" class="form-control" id="" placeholder="Ej. Carrera 1">
-        <label for="inputAddress">Descripción de la carrera</label>
-        <input type="text" class="form-control" id="" placeholder="Ej. 10km">
+        <div class="form-group mt-2">
+          <label for="inputCity">Tipo de Carrera</label>
+          <select class="form-control">
+              <option>Sin Asignar</option>
+              <option>Montaña</option>
+              <option>Velocidad</option>
+              <option>Terraceria</option>
+          </select>
+        </div>
+        <label class="mt-2" for="inputAddress">Descripción de la carrera</label>
+        <textarea type="text" rows="3" class="form-control" id="" placeholder="Ej. 10km"> </textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
