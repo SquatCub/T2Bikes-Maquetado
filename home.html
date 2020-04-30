@@ -5,16 +5,17 @@
 <button type="button" onclick="getSuccess();" class="btn btn-success">Hola</button>
 
 <script type="text/javascript">
-      function getSuccess(){
+      function getSuccess()
+      {
         $.notify({
         	// options
         	message: 'Perfecto, añadido con exito'
         },{
         	// settings
-        	type: 'success',
+        	type: 'info',
           placement: {
         		from: "bottom",
-        		align: "top-right"
+        		align: "right"
         	}
         });
       }
