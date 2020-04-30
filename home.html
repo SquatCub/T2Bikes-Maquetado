@@ -1,3 +1,21 @@
 <h2>Bienvenido Diego Zamora</h2>
 <h4>Estas Registrado como: Administrador</h4>
 <p>Recuerda siempre cerrar tu sesión</p>
+
+<button type="button" onclick="getSuccess();" class="btn btn-success">Hola</button>
+
+<script type="text/javascript">
+      function getSuccess(){
+        $.notify({
+        	// options
+        	message: 'Perfecto, añadido con exito'
+        },{
+        	// settings
+        	type: 'success',
+          placement: {
+        		from: "bottom",
+        		align: "right"
+        	}
+        });
+      }
+    </script>

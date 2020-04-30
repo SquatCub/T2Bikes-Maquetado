@@ -432,6 +432,20 @@ function newCompet(){
   });
 }
 
+function getSuccess(){
+  $.notify({
+    // options
+    message: 'Perfecto, añadido con exito'
+  },{
+    // settings
+    type: 'success',
+    placement: {
+      from: "bottom",
+      align: "right"
+    }
+  });
+}
+
 
 /*------------Funciones Para Graficas ------------*/
 
