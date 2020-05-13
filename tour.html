@@ -15,7 +15,14 @@
 <h6>Status: Activa</h6>
 <a href="reporte.pdf" download="reporte" class="btn btn-warning">Descargar reporte</a>
 <br><br>
-<h4>Puntajes Gobales de la Competecia</h4>
+<h4>Puntajes Globales de la Competecia</h4>
+<p>Deslice para ver más o menos participantes</p>
+
+<div class="inputDiv">
+  <div class="etiqueta"></div>
+  <input type="range" min="0" max="50" autocomplete="off" id="input3">
+  </div>
+
 <table>
   <thead>
     <tr>
@@ -201,3 +208,31 @@
     </div>
   </div>
 </div>
+
+<script>
+  var elInput = document.querySelector('#input');
+  var elInput3 = document.querySelector('#input3');
+if (elInput3) {
+  var w = parseInt(window.getComputedStyle(elInput3, null).getPropertyValue('width'));
+
+  // LA ETIQUETA 
+  var etq = document.querySelector('.etiqueta');
+  if (etq) {
+    // el valor de la etiqueta
+    etq.innerHTML = elInput3.value;
+
+    // calcula la posición inicial de la etiqueta
+    var pxls = w / 50;
+
+    etq.style.left = ((elInput3.value * pxls) - 15) + 'px';
+
+    elInput3.addEventListener('input', function() {
+      // cambia el valor de la etiqueta
+      etq.innerHTML = elInput3.value;
+      // cambia la posición de la etiqueta 
+      etq.style.left = ((elInput3.value * pxls) - 15) + 'px';
+
+    }, false);
+  }
+}
+</script>
