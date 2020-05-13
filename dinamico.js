@@ -11,13 +11,14 @@ $(document).ready(function ()
     // Funcion para el menu
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
+        $('#lateral').toggleClass('active');
     });
 
     // Funcion Para mostrar Home
     $("#home").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
         $.ajax({
           url: "home.html" ,
 
@@ -34,7 +35,7 @@ $(document).ready(function ()
     $("#competidores").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
         $.ajax({
           url: "tables/lista-competidores.html" ,
           success: function(data){
@@ -51,7 +52,7 @@ $(document).ready(function ()
     $("#entrenadores").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
         $.ajax({
           url: "tables/lista-entrenadores.html" ,
           success: function(data){
@@ -68,7 +69,7 @@ $(document).ready(function ()
     $("#reportes").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
         $.ajax({
           url: "reportes.html" ,
           success: function(data){
@@ -84,7 +85,7 @@ $(document).ready(function ()
     $("#estadisticas").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
         $.ajax({
           url: "perfil-competidor.html" ,
           success: function(data){
@@ -100,7 +101,7 @@ $(document).ready(function ()
     $("#competencias").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
       $.ajax({
         url: "tables/lista-competencias.html" ,
         success: function(data){
@@ -115,7 +116,7 @@ $(document).ready(function ()
     $("#tab").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
       $.ajax({
         url: "perfil-competidor.html" ,
         success: function(data){
@@ -133,7 +134,7 @@ $(document).ready(function ()
     $("#lista-competidores").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
         $.ajax({
           url: "tables/lista-competidores.html" ,
           success: function(data){
@@ -151,7 +152,7 @@ $(document).ready(function ()
     $("#registrar-competidor").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
         $.ajax({
           url: "forms/registrar-competidor.html" ,
           success: function(data){
@@ -169,7 +170,7 @@ $(document).ready(function ()
     $("#lista-entrenadores").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
         $.ajax({
           url: "tables/lista-entrenadores.html" ,
           success: function(data){
@@ -184,7 +185,7 @@ $(document).ready(function ()
       $("#sistema").click(function()
       {
         miOff();
-        this.className = "active";
+        this.className = "active mt-2 mb-1";
         $.ajax({
           url: "tables/lista-usuarios.html" ,
           success: function(data){
@@ -200,7 +201,7 @@ $(document).ready(function ()
     $("#registrar-entrenador").click(function()
     {
       miOff();
-      this.className = "active";
+      this.className = "active mt-2 mb-1";
         $.ajax({
           url: "forms/registrar-entrenador.html" ,
           success: function(data){

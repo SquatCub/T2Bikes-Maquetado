@@ -60,14 +60,24 @@ span {
     align-items: stretch;
 }
 
-#sidebar {
+#lateral{
     min-width: 250px;
     max-width: 250px;
-    background: #173e8a;
+    background: #032d6b;
     color: #fff;
     transition: all 0.3s;
 }
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    position: fixed;
+}
 
+#lateral.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
 #sidebar.active {
     min-width: 80px;
     max-width: 80px;
@@ -119,7 +129,7 @@ span {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #021442;
+    background: #031930;
 }
 
 #sidebar .sidebar-header strong {
@@ -209,6 +219,11 @@ a.article:hover {
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
+    #lateral {
+        min-width: 80px;
+        max-width: 80px;
+        margin-left: -80px !important;
+    }
     #sidebar {
         min-width: 80px;
         max-width: 80px;
@@ -223,6 +238,9 @@ a.article:hover {
         transform: translateX(50%);
     }
 
+    #lateral.active {
+        margin-left: 0 !important;
+    }
     #sidebar.active {
         margin-left: 0 !important;
     }
