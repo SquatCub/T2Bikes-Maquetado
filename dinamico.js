@@ -220,14 +220,8 @@ function miOff()
   document.getElementById('home').className = " ";
   document.getElementById('competidores').className = " ";
   document.getElementById('entrenadores').className = " ";
-  /*document.getElementById('reportes').className = " ";
-  document.getElementById('estadisticas').className = " ";*/
   document.getElementById('competencias').className = " ";
   document.getElementById('sistema').className = " ";
-  /*document.getElementById('registrar-competidor').className = " ";
-  document.getElementById('lista-competidores').className = " ";
-  document.getElementById('registrar-entrenador').className = " ";
-  document.getElementById('lista-entrenadores').className = " ";*/
 }
 
 
